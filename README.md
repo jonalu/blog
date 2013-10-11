@@ -1,1 +1,1 @@
-Blog project using techs like mongodb, node, jade
+Blog project using techs like mongodb, node, jade, sass

@@ -1,0 +1,12 @@
+mixin inputForm(formAction)
+  div.formWrapper
+    form( method="post", action=formAction)
+      - if (typeof(article) !== 'undefined'){
+        input( type="hidden", name="_id", value=article._id.toHexString())
+      - }
+      div
+        input( type="text", name="title", id="addCommentPerson" placeholder="Your name.." class="commentatorName")
+      div
+        textarea( name="body", rows=5, id="addCommentComment" class="commentTextArea")
+      div#editArticleSubmit
+        input(type="submit", value="Send")

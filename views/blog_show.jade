@@ -1,0 +1,9 @@
+include mixins/inputForm
+extend layout
+block content
+    a.back(href="/")!= "back"
+    include article
+    mixin inputForm("/blog/addComment")
+
+
+

@@ -1,0 +1,37 @@
+@mixin post-base{
+    width: 100%;
+    margin: 20px 0;
+    padding: 15px 0;
+    text-align: left;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    .title{
+        font-weight: bold;
+        .commentLink{
+            text-decoration: none;
+            font-size: .6em;
+            margin-left: 10px;
+        }
+    }
+    .body, .title{
+        padding: 2px 10px;
+        font-size: .8em;
+    }
+}
+
+.article{
+    width: 100%;
+    margin: auto;
+    .blogpost{
+         @include post-base;
+         background: #aaafff;
+    }
+    .comment{
+        @include post-base;
+        background: #fffaaa;
+    }
+    .created_at{
+        display: none;
+    }
+
+}

@@ -1,0 +1,10 @@
+div.article
+  div.blogpost
+    div.created_at= article.created_at
+    div.title= article.title
+      a.commentLink(href="/blog/"+article._id.toHexString())!= "Comment on this post"
+    div.body= article.body
+  - each comment in article.comments
+    div.comment
+      div.title= comment.person
+      div.body= comment.comment

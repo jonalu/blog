@@ -1,0 +1,24 @@
+@mixin input-base{
+    padding: 0;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.formWrapper{
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+    form{
+        input[type="text"].commentatorName{
+            @include input-base;
+        }
+        textarea.commentTextArea{
+            @include input-base;
+            height: 100px;
+            resize: none;
+        }
+        #editArticleSubmit{
+            float: right;
+        }
+    }
+}
